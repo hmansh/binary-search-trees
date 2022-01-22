@@ -1,43 +1,26 @@
 import "./App.css";
-import AppBar from "@mui/material/AppBar";
+import React from "react";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import QuestionGrid from "./components/QuestionGrid";
 import CardGrid from "./components/CardGrid";
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-
-const LoginButton = styled(Button)({
-  boxShadow: "none",
-  textTransform: "none",
-  fontSize: "1.5vh",
-  padding: "6px 12px",
-  height: "100%",
-  width: '60%',
-  maxWidth: "150px",
-  border: "1px solid",
-  lineHeight: 1.5,
-  backgroundColor: "#27AB5F",
-  borderColor: "#27AB5F",
-  fontWeight: 600,
-  "&:hover": {
-    backgroundColor: "#0BD862",
-    borderColor: "#27AB5F",
-    boxShadow: "none",
-  },
-  "&:active": {
-    boxShadow: "none",
-    backgroundColor: "#27AB5F",
-    borderColor: "#0BD862",
-  },
-  "&:focus": {
-    boxShadow: "0 0 0 0.2rem rgba(39, 171, 95, 0.5)",
-  },
-});
+import Header from "./components/Header/Header";
 
 function App() {
+
+  const [title, setTitle] = React.useState('binarySearchTree');
+  const [navigateBack, setNavigateBack] = React.useState(false);
+
+  const handleTitleChange = (title) => {
+    setTitle(title);
+  };
+
+  const handleNavBack = (curr) => {
+    setNavigateBack(curr);
+  }
+
+  const [color, setColor] = React.useState('#1F1F1F');
+
   return (
     <div className="App">
       <Box
@@ -48,26 +31,9 @@ function App() {
           background: "#EEEBE0",
         }}
       >
-        <AppBar
-          position="sticky"
-          sx={{ background: "#1F1F1F", boxShadow: "none" }}
-        >
-          <Toolbar sx={{display: 'flex', justifyContent: 'space-between'}}>
-            <Link to="/" style={{ textDecoration: "none"}}>
-              <Typography
-                variant="h5"
-                component="div"
-                sx={{ color: "white", flexGrow: 1, letterSpacing: "1px" }}
-              >
-                binarySearchTree
-              </Typography>
-            </Link>
-            <LoginButton variant="contained" disableRipple>Login</LoginButton>
-          </Toolbar>
-        </AppBar>
         <Routes>
-          <Route path="/" element={<CardGrid />} />
-          <Route path="/topic/:slug" element={<QuestionGrid />} />
+          <Route path="/" element={<CardGrid setColor={setColor} title={title} navigateBack={navigateBack} handleNavBack={handleNavBack} setTitle={handleTitleChange}/>} />
+          <Route path="/topic/:slug" element={<QuestionGrid color={color} title={title} navigateBack={navigateBack} handleNavBack={handleNavBack} setTitle={handleTitleChange} />} />
         </Routes>
       </Box>
     </div>

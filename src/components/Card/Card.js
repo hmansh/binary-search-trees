@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import "../../App.css";
 
-export default function ContentCard({ pos, topic, total, completed }) {
+export default function ContentCard({ pos, topic, total, completed, setColor }) {
   const blue = "#14213D";
   const yellow = "#14213D";
   const colors = [
@@ -19,14 +19,16 @@ export default function ContentCard({ pos, topic, total, completed }) {
   ];
   const perc = Math.floor(100 * (completed / total)) % 101;
 
+  const changeColor = (color) => {
+      setColor(color);
+  }
+
   return (
-    <div style={{ height: "90%", minHeight: "16vh" }}>
+    <div style={{ height: "90%", minHeight: "16vh" }} onClick={() => changeColor(colors[pos % colors.length])}>
       <Card
         variant="outlined"
         sx={{
           border: "0.7vh solid white",
-          // background: '#CBC7B1',
-          // backgroundImage: 'radial-gradient(white 1px, transparent 0)',
           borderRadius: "1vh",
           cursor: "pointer",
           display: "flex",
@@ -40,12 +42,9 @@ export default function ContentCard({ pos, topic, total, completed }) {
             borderRadius: "0.6vh",
             height: "60%",
             background: colors[pos % colors.length],
-            // backgroundImage: 'radial-gradient(white 1px, transparent 0)',
-            // backgroundSize: '25px 25px',
           }}
         >
           <Typography
-            // variant="h5"
             style={{
               padding: "1rem",
               color: "white",
@@ -60,7 +59,6 @@ export default function ContentCard({ pos, topic, total, completed }) {
         <div
           style={{
             height: "41%",
-            // background: '#CBC7B1',
           }}
         >
           <Typography
@@ -73,7 +71,7 @@ export default function ContentCard({ pos, topic, total, completed }) {
             }}
           >
             Progress
-            <span className="progress-count">{perc}</span>
+            <span className="progress-count">{perc}%</span>
             <div className="progress-bar">
               <span className="total-progress">
                 <span className="progress" style={{ width: `${perc}%` }}></span>

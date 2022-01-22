@@ -11,12 +11,11 @@ import Button from '@mui/material/Button';
 const BootstrapButton = styled(Button)({
     boxShadow: 'none',
     textTransform: 'none',
-    fontSize: '1.5vh',
-    padding: '6px 12px',
-    height: '100%',
+    padding: '5px',
+    height: '90%',
     width:'60%',
     border: '1px solid',
-    lineHeight: 1.5,
+    lineHeight: 1,
     backgroundColor: '#0063cc',
     borderColor: '#0063cc',
     fontWeight: 600,
@@ -37,18 +36,14 @@ const BootstrapButton = styled(Button)({
   
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-export default function QCard({ pos = 1}) {
-    const blue = '#14213D';
-    const yellow = '#14213D';
-    const colors = ['#F94144']
+export default function QCard({ pos = 1, ...props}) {
+    const { color } = props;
     return (
         <div style={{ height: '90%', minHeight: '16vh'}}>
             <Card
                 variant="outlined"
                 sx={{
                     border:'0.7vh solid white',
-                    // background: '#CBC7B1',
-                    // backgroundImage: 'radial-gradient(white 1px, transparent 0)',
                     borderRadius:'1vh',
                     cursor: 'pointer',
                     display: 'flex',
@@ -61,17 +56,13 @@ export default function QCard({ pos = 1}) {
                     style={{
                         borderRadius: '0.6vh',
                         height: '60%',
-                        background: colors[pos%(colors.length)],
-                        // backgroundImage: 'radial-gradient(white 1px, transparent 0)',
-                        // backgroundSize: '25px 25px',
+                        background: color,
                     }}
                 >
                     <Typography
-                        // variant="h5"
                         style={{
                             padding: '1rem',
                             color: 'white',
-                            // fontWeight: '600',
                             textAlign: 'left',
                             fontSize:'2vh'
                         }}
