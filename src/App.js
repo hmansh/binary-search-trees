@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import { Routes, Route } from "react-router-dom";
 import QuestionGrid from "./components/QuestionGrid";
 import CardGrid from "./components/CardGrid";
-import Header from "./components/Header/Header";
 
 function App() {
   const [title, setTitle] = React.useState("binarySearchTree");

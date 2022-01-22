@@ -4,16 +4,13 @@ import Card from "@mui/material/Card";
 import "../../App.css";
 
 export default function ContentCard({ pos, topic, total, completed, setColor }) {
-  const blue = "#14213D";
-  const yellow = "#14213D";
+
   const colors = [
     "#F4A261",
     "#98C1D9",
     "#2A9D8F",
     "#FFBB12",
     "#264653",
-    // '#E9C46A',
-    // '#14213D',
     "#F94144",
     "#8AC926",
   ];
