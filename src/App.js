@@ -7,8 +7,7 @@ import CardGrid from "./components/CardGrid";
 import Header from "./components/Header/Header";
 
 function App() {
-
-  const [title, setTitle] = React.useState('binarySearchTree');
+  const [title, setTitle] = React.useState("binarySearchTree");
   const [navigateBack, setNavigateBack] = React.useState(false);
 
   const handleTitleChange = (title) => {
@@ -17,9 +16,9 @@ function App() {
 
   const handleNavBack = (curr) => {
     setNavigateBack(curr);
-  }
+  };
 
-  const [color, setColor] = React.useState('#1F1F1F');
+  const [color, setColor] = React.useState("#1F1F1F");
 
   return (
     <div className="App">
@@ -32,8 +31,30 @@ function App() {
         }}
       >
         <Routes>
-          <Route path="/" element={<CardGrid setColor={setColor} title={title} navigateBack={navigateBack} handleNavBack={handleNavBack} setTitle={handleTitleChange}/>} />
-          <Route path="/topic/:slug" element={<QuestionGrid color={color} title={title} navigateBack={navigateBack} handleNavBack={handleNavBack} setTitle={handleTitleChange} />} />
+          <Route
+            path="/"
+            element={
+              <CardGrid
+                setColor={setColor}
+                title={title}
+                navigateBack={navigateBack}
+                handleNavBack={handleNavBack}
+                setTitle={handleTitleChange}
+              />
+            }
+          />
+          <Route
+            path="/topic/:slug"
+            element={
+              <QuestionGrid
+                color={color}
+                title={title}
+                navigateBack={navigateBack}
+                handleNavBack={handleNavBack}
+                setTitle={handleTitleChange}
+              />
+            }
+          />
         </Routes>
       </Box>
     </div>
