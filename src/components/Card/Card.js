@@ -4,18 +4,14 @@ import Card from "@mui/material/Card";
 import "../../App.css";
 
 export default function ContentCard({ pos, topic, total, completed, setColor }) {
-  const blue = "#14213D";
-  const yellow = "#14213D";
+
   const colors = [
-    "#F4A261",
-    "#98C1D9",
-    "#2A9D8F",
+    "#0A84FF",
+    "#64D2FF",
+    '#5E5CE6',
     "#FFBB12",
-    "#264653",
-    // '#E9C46A',
-    // '#14213D',
-    "#F94144",
-    "#8AC926",
+    "#32D74B",
+    '#FF2D55'
   ];
   const perc = Math.floor(100 * (completed / total)) % 101;
 
@@ -28,13 +24,14 @@ export default function ContentCard({ pos, topic, total, completed, setColor }) 
       <Card
         variant="outlined"
         sx={{
-          border: "0.7vh solid white",
+          border: '0.7vh solid #161616',
           borderRadius: "1vh",
           cursor: "pointer",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           height: "100%",
+          background: '#161616',
         }}
       >
         <div
@@ -59,11 +56,12 @@ export default function ContentCard({ pos, topic, total, completed, setColor }) 
         <div
           style={{
             height: "41%",
+            background: '#161616'
           }}
         >
           <Typography
             style={{
-              color: "black",
+              color: "white",
               padding: "0.7rem 0.5rem",
               fontWeight: "500",
               fontSize: "1rem",

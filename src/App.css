@@ -37,7 +37,6 @@
 .q-item {
   display: flex;
   justify-content: space-between;
-  background: white;
 }
 
 .completed {

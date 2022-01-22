@@ -43,13 +43,14 @@ export default function QCard({ pos = 1, ...props}) {
             <Card
                 variant="outlined"
                 sx={{
-                    border:'0.7vh solid white',
+                    border:'0.7vh solid #161616',
                     borderRadius:'1vh',
                     cursor: 'pointer',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     height: '100%',
+                    background: '#161616'
                 }}
             >
                 <div
@@ -73,6 +74,7 @@ export default function QCard({ pos = 1, ...props}) {
                 <div
                     style={{
                         height: '41%',
+                        background: '#161616'
                     }}
                 >
                     <Typography
@@ -85,11 +87,11 @@ export default function QCard({ pos = 1, ...props}) {
                         }}
                     >
                         <div className="q-item">
-                            <div className="completed">
+                            <div className="completed" >
                                 <Checkbox
                                 {...label}
-                                icon={<RadioButtonUncheckedOutlinedIcon />}
-                                checkedIcon={<CheckCircleOutlineOutlinedIcon />}
+                                icon={<RadioButtonUncheckedOutlinedIcon sx={{color: 'white'}}/>}
+                                checkedIcon={<CheckCircleOutlineOutlinedIcon sx={{color: 'white'}}/>}
                                 />
                             </div>
                             <div className="link">

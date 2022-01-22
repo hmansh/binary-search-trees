@@ -41,7 +41,7 @@ export default function Header(props) {
     return (
         <AppBar
             position="sticky"
-            sx={{ background: "#1F1F1F", boxShadow: "none" }}
+            sx={{ background: "#161616", boxShadow: "none" }}
         >
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Link to="/" style={{ textDecoration: "none", display: 'flex' }}>
