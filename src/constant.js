@@ -1,26 +1,3 @@
-const topics = [
-  "Implementation",
-  "Arrays",
-  "Matrix",
-  "Bitwise",
-  "Stack",
-  "Recursion",
-  "Queue",
-  "Linked Lists",
-  "Trees",
-  "Binary Search Trees",
-  "Heap",
-  "Hashing",
-  "Graphs",
-  "Graph Algorithms",
-  "Backtracking",
-  "Greedy Algorithms",
-  "Dynamic Programming",
-  "Divide and Conquer",
-  "Sorting",
-  "Searching",
-];
-
 const userStat = {
   userId: "hmansh",
   topics: [
@@ -89,27 +66,27 @@ const userStat = {
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
         {
-          questionName: "Reverse A Linked List",
+          questionName: "Search in Linear Array",
           completed: true,
           questionId: 2022001,
         },
         {
-          questionName: "Reverse A Linked List",
+          questionName: "Left Rotation by 1 Element",
           completed: true,
           questionId: 2022001,
         },
         {
-          questionName: "Reverse A Linked List",
+          questionName: "Check if Sorted",
           completed: true,
           questionId: 2022001,
         },
         {
-          questionName: "Reverse A Linked List",
+          questionName: "Leaders in Array",
           completed: true,
           questionId: 2022001,
         },
         {
-          questionName: "Reverse A Linked List",
+          questionName: "Maximum Difference Problem",
           completed: true,
           questionId: 2022001,
         },

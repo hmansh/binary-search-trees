@@ -1,23 +1,20 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import "../../App.css";
 
 export default function ContentCard({ pos, topic, total, completed, setColor }) {
 
   const colors = [
-    "#F4A261",
-    "#98C1D9",
-    "#2A9D8F",
-    "#FFBB12",
-    "#264653",
-    "#F94144",
-    "#8AC926",
+    // '#000066',
+    // '#031470',
+    '#071597',
+    '#043DF2',
   ];
+
   const perc = Math.floor(100 * (completed / total)) % 101;
 
   const changeColor = (color) => {
-      setColor(color);
+    setColor(color);
   }
 
   return (
@@ -38,7 +35,8 @@ export default function ContentCard({ pos, topic, total, completed, setColor }) 
           style={{
             borderRadius: "0.6vh",
             height: "60%",
-            background: colors[pos % colors.length],
+            background: colors[Math.floor(Math.random() * 10) % (colors.length)],
+            boxShadow: 'inset 0px 4px 4px rgba(0, 0, 0, 0.25)',
           }}
         >
           <div
@@ -67,8 +65,10 @@ export default function ContentCard({ pos, topic, total, completed, setColor }) 
               textAlign: "left",
             }}
           >
-            Progress
-            <span className="progress-count">{perc}%</span>
+            <div className="progress-number">
+              <span className="progress-count">Progress</span>
+              <span className="progress-count">{perc}%</span>
+            </div>
             <div className="progress-bar">
               <span className="total-progress">
                 <span className="progress" style={{ width: `${perc}%` }}></span>

@@ -12,39 +12,38 @@ const BootstrapButton = styled(Button)({
     boxShadow: 'none',
     textTransform: 'none',
     padding: '5px',
-    height: '90%',
-    width:'60%',
-    border: '1px solid',
+    height: '89%',
+    width: '60%',
+    border: 'none',
     lineHeight: 1,
-    backgroundColor: '#0063cc',
-    borderColor: '#0063cc',
+    backgroundColor: '#0A0C12',
+    borderColor: '#0A0C12',
     fontWeight: 600,
     '&:hover': {
-      backgroundColor: '#0069d9',
-      borderColor: '#0062cc',
-      boxShadow: 'none',
+        backgroundColor: '#353535',
+        borderColor: '#0A0C12',
+        boxShadow: 'none',
     },
     '&:active': {
-      boxShadow: 'none',
-      backgroundColor: '#0062cc',
-      borderColor: '#005cbf',
+        boxShadow: 'none',
+        backgroundColor: '#0A0C12',
     },
     '&:focus': {
-      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+        boxShadow: '0 0 0 0.2rem rgba(0,0,0,.5)',
     },
-  });
-  
+});
+
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-export default function QCard({ pos = 1, ...props}) {
+export default function QCard({ pos = 1, ...props }) {
     const { color } = props;
     return (
-        <div style={{ height: '90%', minHeight: '16vh'}}>
+        <div style={{ height: '90%', minHeight: '16vh' }}>
             <Card
                 variant="outlined"
                 sx={{
-                    border:'0.7vh solid white',
-                    borderRadius:'1vh',
+                    border: '0.7vh solid white',
+                    borderRadius: '1vh',
                     cursor: 'pointer',
                     display: 'flex',
                     flexDirection: 'column',
@@ -64,7 +63,8 @@ export default function QCard({ pos = 1, ...props}) {
                             padding: '1rem',
                             color: 'white',
                             textAlign: 'left',
-                            fontSize:'1.1rem'
+                            fontSize: '1.1rem',
+                            boxShadow: 'inset 0px 4px 4px rgba(0, 0, 0, 0.25)',
                         }}
                     >
                         {"Reverse Linked List using Iterative Method"}
@@ -87,9 +87,9 @@ export default function QCard({ pos = 1, ...props}) {
                         <div className="q-item">
                             <div className="completed">
                                 <Checkbox
-                                {...label}
-                                icon={<RadioButtonUncheckedOutlinedIcon />}
-                                checkedIcon={<CheckCircleOutlineOutlinedIcon />}
+                                    {...label}
+                                    icon={<RadioButtonUncheckedOutlinedIcon />}
+                                    checkedIcon={<CheckCircleOutlineOutlinedIcon />}
                                 />
                             </div>
                             <div className="link">

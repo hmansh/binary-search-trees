@@ -26,7 +26,9 @@ function App() {
           flexGrow: 1,
           minHeight: "100vh",
           height: "100%",
-          background: "#EEEBE0",
+          background: "#000000",
+          backgroundImage: 'radial-gradient(#323232 1px, transparent 0)',
+          backgroundSize: '25px 25px',
         }}
       >
         <Routes>
