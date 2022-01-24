@@ -49,20 +49,23 @@ export default function Header(props) {
                         size="large"
                         edge="start"
                         color="inherit"
-                        sx={{ mr: 2, color: 'white' }}
+                        sx={{ mr: 1, color: 'white' }}
                     >
                         <ArrowBackIcon />
                     </IconButton>}
-                    <Typography variant="h5" component="div" sx={{
+                    <div variant="h5" component="div" style={{
                         flexGrow: 1,
                         color: 'white',
                         display: 'flex',
+                        fontSize: '2vh',
                         alignItems: 'center'
                     }}>
                         {title}
-                    </Typography>
+                    </div>
                 </Link>
-                <LoginButton variant="contained" disableRipple>Login</LoginButton>
+                <LoginButton variant="contained" disableRipple>
+                    <div>Login</div>
+                </LoginButton>
             </Toolbar>
         </AppBar>
     );

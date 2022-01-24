@@ -59,16 +59,16 @@ export default function QCard({ pos = 1, ...props}) {
                         background: color,
                     }}
                 >
-                    <Typography
+                    <div
                         style={{
                             padding: '1rem',
                             color: 'white',
                             textAlign: 'left',
-                            fontSize:'2vh'
+                            fontSize:'1.1rem'
                         }}
                     >
                         {"Reverse Linked List using Iterative Method"}
-                    </Typography>
+                    </div>
                 </div>
                 <div
                     style={{
@@ -94,7 +94,7 @@ export default function QCard({ pos = 1, ...props}) {
                             </div>
                             <div className="link">
                                 <BootstrapButton variant="contained" disableRipple>
-                                    Leetcode
+                                    <div>Leetcode</div>
                                 </BootstrapButton>
                             </div>
                         </div>

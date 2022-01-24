@@ -41,24 +41,24 @@ export default function ContentCard({ pos, topic, total, completed, setColor }) 
             background: colors[pos % colors.length],
           }}
         >
-          <Typography
+          <div
             style={{
               padding: "1rem",
               color: "white",
               fontWeight: "600",
               textAlign: "left",
-              fontSize: "3vh",
+              fontSize: "2.5vh",
             }}
           >
             {topic}
-          </Typography>
+          </div>
         </div>
         <div
           style={{
             height: "41%",
           }}
         >
-          <Typography
+          <div
             style={{
               color: "black",
               padding: "0.7rem 0.5rem",
@@ -74,7 +74,7 @@ export default function ContentCard({ pos, topic, total, completed, setColor }) 
                 <span className="progress" style={{ width: `${perc}%` }}></span>
               </span>
             </div>
-          </Typography>
+          </div>
         </div>
       </Card>
     </div>

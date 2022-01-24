@@ -1,7 +1,5 @@
 * {
-  font-family: 'Outfit', sans-serif;
-  font-family: 'Quicksand', sans-serif;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .App {
@@ -32,7 +30,7 @@
 
 .progress-bar {
   width: 100%;
-  padding-top: 4px;
+  padding-top: 5px;
   height: 10px;
   margin: 0 auto;
 }
