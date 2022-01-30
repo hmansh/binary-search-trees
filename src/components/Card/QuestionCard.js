@@ -23,10 +23,10 @@ const style = {
   },
   cardHeader: {
     borderRadius: "0.6vh",
-    height: "60%",
+    height: "55%",
   },
   topicTitle: {
-    padding: "0.6rem",
+    padding: "0.5rem",
     color: "white",
     textAlign: "left",
     fontSize: "1rem",
@@ -40,7 +40,7 @@ const style = {
     textAlign: "left",
   },
   cardLower: {
-    height: "41%",
+    height: "45%",
   },
 };
 

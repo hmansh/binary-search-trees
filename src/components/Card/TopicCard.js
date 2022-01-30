@@ -18,11 +18,11 @@ const style = {
   },
   cardHeader: {
     borderRadius: "0.6vh",
-    height: "60%",
+    height: "55%",
     boxShadow: "inset 0px 4px 4px rgba(0, 0, 0, 0.25)",
   },
   topicTitle: {
-    padding: "1rem",
+    padding: "0.7rem",
     color: "white",
     fontWeight: "600",
     textAlign: "left",
@@ -36,7 +36,7 @@ const style = {
     textAlign: "left",
   },
   cardLower: {
-    height: '41%',
+    height: '45%',
   }
 };
 
