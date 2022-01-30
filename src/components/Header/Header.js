@@ -10,10 +10,11 @@ import {
   GoogleAuthProvider,
   signOut,
 } from "firebase/auth";
-import app from "../../firebase";
+import db from "../../firebase";
 import LogoutIcon from "@mui/icons-material/Logout";
 import "../../App";
 import { LogoutButton, LoginButton } from "../CustomerComponents";
+import { collection, getDocs, query, where, setDoc, doc  } from "firebase/firestore"; 
 
 const style = {
   appbar: {
@@ -48,28 +49,51 @@ const style = {
 };
 
 export default function Header(props) {
-  const { navigateBack, title, user, setUser, signedIn, setSignedIn } = props;
+  const { navigateBack, title, user, setUser, signedIn, setSignedIn, questions, setQuestions } = props;
 
-  const handleUserLogin = () => {
+  useEffect((signedIn) => {
+    if (signedIn) return;
+    setQuestions(Array.from(Array(1000).keys()).map((_) => false));
+  }, [signedIn]);
+
+  const handleUserLogin = async () => {
     console.log("user tried to log in");
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
-    if (app) {
-      signInWithPopup(auth, provider)
-        .then((result) => {
-          const { displayName: name, email, uid } = result.user;
-          setUser({
-            email: email,
-            name: name,
-            uid: uid,
-          });
-          setSignedIn(true);
-        })
-        .catch((error) => {
-          console.log(error);
-          setSignedIn(false);
+    signInWithPopup(auth, provider)
+      .then(async (result) => {
+        const { displayName: name, email, uid, questions, setQuestions } = result.user;
+        setUser({
+          email: email,
+          name: name,
+          uid: uid,
         });
-    }
+        const usersRef = collection(db, "users");
+        const q = query(usersRef, where("uid", "==", uid));
+        const querySnapshot = await getDocs(q);
+        let insert = true;
+        setSignedIn(true);
+        querySnapshot.forEach((doc) => {
+          if (doc.id === uid) {
+            // setQuestions(prev => [...doc.data().questions]);
+            console.log(doc.data().questions);
+          } else if (doc.id !== uid) {
+            insert = false; 
+          }
+        });
+        if (insert) {
+          await setDoc(doc(usersRef, uid), {
+            name: name,
+            email: email,
+            uid: uid,
+            questions: Array.from(Array(1000).keys()).map((_) => false),
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        setSignedIn(false);
+      });
   };
 
   const handleUserLogOut = () => {
@@ -85,10 +109,6 @@ export default function Header(props) {
         setSignedIn(true);
       });
   };
-
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
 
   return (
     <AppBar position="sticky" sx={style.appbar}>

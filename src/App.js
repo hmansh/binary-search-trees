@@ -11,7 +11,7 @@ function App() {
   const [navigateBack, setNavigateBack] = React.useState(false);
   const [user, setUser] = useState({});
   const [signedIn, setSignedIn] = useState(false);
-  const [userStats, setUserStats] = useState({});
+  const [questions, setQuestions] = useState([Array.from(Array(1000).keys()).map((_) => false)]);
   const [color, setColor] = React.useState("#1F1F1F");
 
   const handleTitleChange = (title) => {
@@ -49,6 +49,8 @@ function App() {
                 setUser={setUser}
                 signedIn={signedIn}
                 setSignedIn={setSignedIn}
+                questions={questions}
+                setQuestions={setQuestions}
               />
             }
           />
@@ -65,6 +67,8 @@ function App() {
                 setUser={setUser}
                 signedIn={signedIn}
                 setSignedIn={setSignedIn}
+                questions={questions}
+                setQuestions={setQuestions}
               />
             }
           />

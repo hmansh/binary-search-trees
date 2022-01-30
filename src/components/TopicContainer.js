@@ -9,7 +9,7 @@ import { FilterButton } from "./CustomerComponents";
 
 export default function TopicContainer(props) {
 
-  const { setTitle, handleNavBack, navigateBack, title, setColor, user, setUser, signedIn, setSignedIn } = props;
+  const { setTitle, handleNavBack, navigateBack, title, setColor, user, setUser, signedIn, setSignedIn, questions, setQuestions } = props;
   React.useEffect(() => {
     setTitle('dsalgo!');
     handleNavBack(false);
@@ -22,6 +22,8 @@ export default function TopicContainer(props) {
         setUser={setUser}
         signedIn={signedIn}
         setSignedIn={setSignedIn}
+        questions={questions}
+        setQuestions={setQuestions}
        />
       <div className="filter-tab">
         <ButtonGroup disableRipple disableElevation>

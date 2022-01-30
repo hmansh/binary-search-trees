@@ -9,7 +9,7 @@ import QuestionCard from './Card/QuestionCard';
 
 export default function QuestionContainer(props) {
   const { slug } = useParams();
-  const { setTitle, handleNavBack, navigateBack, title, color, user, setUser, signedIn, setSignedIn } = props;
+  const { setTitle, handleNavBack, navigateBack, title, color, user, setUser, signedIn, setSignedIn, questions, setQuestions } = props;
   const { question, topic } = userStat.topics.filter(
     (item) => item.slug === slug
   )[0];
@@ -26,6 +26,8 @@ export default function QuestionContainer(props) {
         setUser={setUser}
         signedIn={signedIn}
         setSignedIn={setSignedIn}
+        questions={questions}
+        setQuestions={setQuestions}
       />
       <div className="filter-tab">
         <SaveButton disableElevation disableRipple disabled={false}>Save Progress</SaveButton>
