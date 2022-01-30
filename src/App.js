@@ -11,6 +11,8 @@ function App() {
   const [navigateBack, setNavigateBack] = React.useState(false);
   const [user, setUser] = useState({});
   const [signedIn, setSignedIn] = useState(false);
+  const [userStats, setUserStats] = useState({});
+  const [color, setColor] = React.useState("#1F1F1F");
 
   const handleTitleChange = (title) => {
     setTitle(title);
@@ -20,7 +22,6 @@ function App() {
     setNavigateBack(curr);
   };
 
-  const [color, setColor] = React.useState("#1F1F1F");
 
   return (
     <div className="App">
