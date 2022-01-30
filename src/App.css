@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+.title-logo {
+  font-family: 'Permanent Marker', cursive;
 }
 
 .App {
@@ -12,7 +19,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: black;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -79,7 +86,7 @@
 
 .filter-tab {
   margin-top: 15px;
-  padding-right: 15px;
+  padding: 0px 15px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 }

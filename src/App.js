@@ -1,13 +1,18 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import { Routes, Route } from "react-router-dom";
 import QuestionGrid from "./components/QuestionGrid";
 import CardGrid from "./components/CardGrid";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 function App() {
-  const [title, setTitle] = React.useState("binarySearchTree");
+
+  const [title, setTitle] = React.useState("dsalgo!");
   const [navigateBack, setNavigateBack] = React.useState(false);
+  const [user, setUser] = useState({});
+  const [signedIn, setSignedIn] = useState(false);
 
   const handleTitleChange = (title) => {
     setTitle(title);
@@ -41,6 +46,10 @@ function App() {
                 navigateBack={navigateBack}
                 handleNavBack={handleNavBack}
                 setTitle={handleTitleChange}
+                user={user}
+                setUser={setUser}
+                signedIn={signedIn}
+                setSignedIn={setSignedIn}
               />
             }
           />
@@ -48,6 +57,34 @@ function App() {
             path="/topic/:slug"
             element={
               <QuestionGrid
+                color={color}
+                title={title}
+                navigateBack={navigateBack}
+                handleNavBack={handleNavBack}
+                setTitle={handleTitleChange}
+                user={user}
+                setUser={setUser}
+                signedIn={signedIn}
+                setSignedIn={setSignedIn}
+              />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <Login
+                color={color}
+                title={title}
+                navigateBack={navigateBack}
+                handleNavBack={handleNavBack}
+                setTitle={handleTitleChange}
+              />
+            }
+          />
+          <Route
+            path="/signin"
+            element={
+              <Signup
                 color={color}
                 title={title}
                 navigateBack={navigateBack}

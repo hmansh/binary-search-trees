@@ -35,15 +35,20 @@ const FilterButton = styled(Button)({
 
 export default function CardGrid(props) {
 
-  const { setTitle, handleNavBack, navigateBack, title, setColor } = props;
+  const { setTitle, handleNavBack, navigateBack, title, setColor, user, setUser, signedIn, setSignedIn } = props;
   React.useEffect(() => {
-    setTitle('binarySearchTrees');
+    setTitle('dsalgo!');
     handleNavBack(false);
   }, []);
 
   return (
     <>
-      <Header title={title} navigateBack={navigateBack} />
+      <Header title={title} navigateBack={navigateBack}
+        user={user}
+        setUser={setUser}
+        signedIn={signedIn}
+        setSignedIn={setSignedIn}
+       />
       <div className="filter-tab">
         <ButtonGroup disableRipple disableElevation>
           {/* <FilterButton value={4}>Hide Completed</FilterButton> */}
