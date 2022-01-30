@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 * {
-  font-family: 'Poppins', sans-serif;
+
 }
 
 .title-logo {
@@ -11,23 +8,6 @@
 
 .App {
   text-align: center;
-}
-
-::-webkit-scrollbar {
-  width: 1px;
-  height: 1px;
-}
-
-::-webkit-scrollbar-track {
-  background: black;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(124, 123, 123, 0.205);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 0, 0);
 }
 
 .App-logo {

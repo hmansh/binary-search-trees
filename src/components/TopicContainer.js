@@ -1,39 +1,13 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import ContentCard from "./Card/Card";
 import userStat from "../constant";
 import { Link } from "react-router-dom";
 import Header from "./Header/Header";
 import ButtonGroup from "@mui/material/ButtonGroup";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
+import TopicCard from './Card/TopicCard';
+import { FilterButton } from "./CustomerComponents";
 
-const FilterButton = styled(Button)({
-  boxShadow: "none",
-  textTransform: "none",
-  border: "none",
-  color: "white",
-  height: "2rem",
-  fontWeight: '500',
-  backgroundColor: "#626F8A",
-  borderColor: "#0A0C12",
-  "&:hover": {
-    backgroundColor: "#27304E",
-    border: "none"
-  },
-  "&:active": {
-    backgroundColor: "#27304E",
-    boxShadow: "none",
-    border: "none"
-  },
-  "&:focus": {
-    boxShadow: "0 0 0 0.1rem rgba(107, 147, 242,.5)",
-    border: "none"
-  }
-});
-
-
-export default function CardGrid(props) {
+export default function TopicContainer(props) {
 
   const { setTitle, handleNavBack, navigateBack, title, setColor, user, setUser, signedIn, setSignedIn } = props;
   React.useEffect(() => {
@@ -72,7 +46,7 @@ export default function CardGrid(props) {
             sx={{ height: "20vh", padding: "10px" }}
           >
             <Link to={`topic/${item.slug}`} style={{ textDecoration: "none" }}>
-              <ContentCard
+              <TopicCard
                 setColor={setColor}
                 pos={index}
                 topic={item.topic}

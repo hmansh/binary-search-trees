@@ -1,63 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Toolbar from "@mui/material/Toolbar";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import IconButton from "@mui/material/IconButton";
 import AppBar from "@mui/material/AppBar";
 import { Link } from 'react-router-dom';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut  } from "firebase/auth";
 import app from "../../firebase";
 import LogoutIcon from '@mui/icons-material/Logout';
 import "../../App";
-
-const LogoutButton = styled(Button)({
-    boxShadow: "none",
-    textTransform: "none",
-    fontSize: "1.5vh",
-    padding: "6px 12px",
-    height: "100%",
-    width: '30%',
-    maxWidth: "130px",
-    border: "none",
-    lineHeight: 1.5,
-    backgroundColor: "#FF2511",
-    fontWeight: 600,
-    "&:hover": {
-        backgroundColor: "#D01110",
-        boxShadow: "none",
-    },
-    "&:active": {
-        boxShadow: "none",
-        backgroundColor: "#FF2511",
-    },
-    "&:focus": {
-        boxShadow: "0 0 0 0.2rem rgba(255, 0, 0, 0.5)",
-    },
-});
-
-const LoginButton = styled(Button)({
-    boxShadow: "none",
-    textTransform: "none",
-    fontSize: "1.5vh",
-    padding: "6px 12px",
-    height: "100%",
-    width: '20%',
-    maxWidth: "100px",
-    border: "none",
-    lineHeight: 1.5,
-    color: '#000000',
-    backgroundColor: "#FFFFFF",
-    fontWeight: 600,
-    '&:hover': {
-      backgroundColor: '#F5F5F5',
-      borderColor: '#0062cc',
-      boxShadow: 'none',
-    },
-    '&:focus': {
-      boxShadow: '0 0 0 0.2rem rgba(202, 202, 202, 0.705)',
-    },
-});
+import { LogoutButton, LoginButton } from '../CustomerComponents';
 
 export default function Header(props) {
     const { navigateBack, title, user, setUser, signedIn, setSignedIn  } = props;

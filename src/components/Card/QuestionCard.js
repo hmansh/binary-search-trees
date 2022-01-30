@@ -2,40 +2,14 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import "../../App.css";
-import { styled } from '@mui/material/styles';
 import Checkbox from "@mui/material/Checkbox";
 import RadioButtonUncheckedOutlinedIcon from "@mui/icons-material/RadioButtonUncheckedOutlined";
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
-import Button from '@mui/material/Button';
-
-const BootstrapButton = styled(Button)({
-    boxShadow: 'none',
-    textTransform: 'none',
-    padding: '5px',
-    height: '89%',
-    width: '60%',
-    border: 'none',
-    lineHeight: 1,
-    backgroundColor: '#0A0C12',
-    borderColor: '#0A0C12',
-    fontWeight: 600,
-    '&:hover': {
-        backgroundColor: '#353535',
-        borderColor: '#0A0C12',
-        boxShadow: 'none',
-    },
-    '&:active': {
-        boxShadow: 'none',
-        backgroundColor: '#0A0C12',
-    },
-    '&:focus': {
-        boxShadow: '0 0 0 0.2rem rgba(0,0,0,.5)',
-    },
-});
+import { QuestionLinkButton } from "../CustomerComponents";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
-export default function QCard({ pos = 1, ...props }) {
+export default function QuestionCard({ pos = 1, ...props }) {
     const { color } = props;
     return (
         <div style={{ height: '90%', minHeight: '16vh' }}>
@@ -93,9 +67,9 @@ export default function QCard({ pos = 1, ...props }) {
                                 />
                             </div>
                             <div className="link">
-                                <BootstrapButton variant="contained" disableRipple>
+                                <QuestionLinkButton variant="contained" disableRipple>
                                     <div>Leetcode</div>
-                                </BootstrapButton>
+                                </QuestionLinkButton>
                             </div>
                         </div>
                     </Typography>

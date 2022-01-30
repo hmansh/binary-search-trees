@@ -1,6 +1,35 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
 }
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 123, 123, 0.205);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+}
+
+:root {
+  --progress-blue: '',
+  --background-black: '',
+  --header_background: '',
+  --error-red: '',
+  --success-green: '',
+}
+

@@ -2,7 +2,7 @@ import React from "react";
 import Card from "@mui/material/Card";
 import "../../App.css";
 
-export default function ContentCard({ pos, topic, total, completed, setColor }) {
+export default function TopicCard({ pos, topic, total, completed, setColor }) {
 
   const colors = [
     // '#000066',

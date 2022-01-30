@@ -2,10 +2,8 @@ import "./App.css";
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import { Routes, Route } from "react-router-dom";
-import QuestionGrid from "./components/QuestionGrid";
-import CardGrid from "./components/CardGrid";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+import TopicContainer from "./components/TopicContainer";
+import QuestionContainer from "./components/QuestionContainer";
 
 function App() {
 
@@ -40,7 +38,7 @@ function App() {
           <Route
             path="/"
             element={
-              <CardGrid
+              <TopicContainer
                 setColor={setColor}
                 title={title}
                 navigateBack={navigateBack}
@@ -56,7 +54,7 @@ function App() {
           <Route
             path="/topic/:slug"
             element={
-              <QuestionGrid
+              <QuestionContainer
                 color={color}
                 title={title}
                 navigateBack={navigateBack}
@@ -66,30 +64,6 @@ function App() {
                 setUser={setUser}
                 signedIn={signedIn}
                 setSignedIn={setSignedIn}
-              />
-            }
-          />
-          <Route
-            path="/login"
-            element={
-              <Login
-                color={color}
-                title={title}
-                navigateBack={navigateBack}
-                handleNavBack={handleNavBack}
-                setTitle={handleTitleChange}
-              />
-            }
-          />
-          <Route
-            path="/signin"
-            element={
-              <Signup
-                color={color}
-                title={title}
-                navigateBack={navigateBack}
-                handleNavBack={handleNavBack}
-                setTitle={handleTitleChange}
               />
             }
           />
