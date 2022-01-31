@@ -6,6 +6,8 @@ import Header from "./Header/Header.js"
 import ButtonGroup from "@mui/material/ButtonGroup";
 import { FilterButton, SaveButton } from "./CustomerComponents";
 import QuestionCard from './Card/QuestionCard';
+import RotateRightRoundedIcon from '@mui/icons-material/RotateRightRounded';
+import "../App.css";
 
 export default function QuestionContainer(props) {
   const { slug } = useParams();
@@ -19,6 +21,8 @@ export default function QuestionContainer(props) {
     handleNavBack(true);
   });
 
+  const [ uploading ] = React.useState(true);
+
   return (
     <>
       <Header title={title} navigateBack={navigateBack} 
@@ -30,7 +34,9 @@ export default function QuestionContainer(props) {
         setQuestions={setQuestions}
       />
       <div className="filter-tab">
-        <SaveButton disableElevation disableRipple disabled={false}>Save Progress</SaveButton>
+        <SaveButton disableElevation disableRipple disabled={false}
+          endIcon={uploading ? <RotateRightRoundedIcon className="save_loading" /> : ''}
+         >Save Progress</SaveButton>
         <ButtonGroup disableRipple disableElevation>
           <FilterButton value={4}>Hide Completed</FilterButton>
         </ButtonGroup>

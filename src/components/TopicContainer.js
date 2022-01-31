@@ -6,7 +6,7 @@ import Header from "./Header/Header";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import TopicCard from "./Card/TopicCard";
 import { FilterButton } from "./CustomerComponents";
-import FilterListOffIcon from "@mui/icons-material/FilterListOff";
+import FilterListOffRoundedIcon from '@mui/icons-material/FilterListOffRounded';
 
 export default function TopicContainer(props) {
   const {
@@ -54,7 +54,7 @@ export default function TopicContainer(props) {
           </FilterButton>
           {filterValue !== "all" && (
             <FilterButton onClick={() => setFilterValue("all")}>
-              <FilterListOffIcon />
+              <FilterListOffRoundedIcon />
             </FilterButton>
           )}
         </ButtonGroup>
