@@ -13,6 +13,7 @@ function App() {
   const [signedIn, setSignedIn] = useState(false);
   const [questions, setQuestions] = useState([Array.from(Array(1000).keys()).map((_) => false)]);
   const [color, setColor] = React.useState("#1F1F1F");
+  const [filterValue, setFilterValue] = React.useState('all');
 
   const handleTitleChange = (title) => {
     setTitle(title);
@@ -51,6 +52,8 @@ function App() {
                 setSignedIn={setSignedIn}
                 questions={questions}
                 setQuestions={setQuestions}
+                filterValue={filterValue}
+                setFilterValue={setFilterValue}
               />
             }
           />

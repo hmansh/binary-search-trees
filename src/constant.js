@@ -4,6 +4,7 @@ const userStat = {
     {
       topic: "Implementation",
       slug: "implementation",
+      type: "basic",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -118,6 +119,7 @@ const userStat = {
     {
       topic: "Arrays",
       slug: "arrays",
+      type: "ds",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -201,6 +203,7 @@ const userStat = {
     {
       topic: "Matrix",
       slug: "matrix",
+      type: "ds",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -234,6 +237,7 @@ const userStat = {
     {
       topic: "Bitwise",
       slug: "bitwise",
+      type: "basic",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -292,6 +296,7 @@ const userStat = {
     {
       topic: "Stack",
       slug: "stack",
+      type: "ds",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -350,6 +355,7 @@ const userStat = {
     {
       topic: "Recursion",
       slug: "recursion",
+      type: "basic",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -408,6 +414,7 @@ const userStat = {
     {
       topic: "Queue",
       slug: "queue",
+      type: "ds",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -456,6 +463,7 @@ const userStat = {
     {
       topic: "Linked Lists",
       slug: "linked-lists",
+      type: "ds",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -539,6 +547,7 @@ const userStat = {
     {
       topic: "Trees",
       slug: "trees",
+      type: "ds",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -597,6 +606,7 @@ const userStat = {
     {
       topic: "Binary Search Trees",
       slug: "binary-search-tree",
+      type: "ds",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -655,6 +665,7 @@ const userStat = {
     {
       topic: "N-ary Tree",
       slug: "nary-tree",
+      type: "ds",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -713,6 +724,7 @@ const userStat = {
     {
       topic: "Heap",
       slug: "heap",
+      type: "ds",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -771,6 +783,7 @@ const userStat = {
     {
       topic: "Hashing",
       slug: "hashing",
+      type: "ds",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -814,6 +827,7 @@ const userStat = {
     {
       topic: "Graphs",
       slug: "graphs",
+      type: "ds",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -857,6 +871,7 @@ const userStat = {
     {
       topic: "Graph Algorithms",
       slug: "graph-algorithms",
+      type: "algorithms",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -914,6 +929,7 @@ const userStat = {
     {
       topic: "Backtracking",
       slug: "backtracking",
+      type: "algorithms",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -972,6 +988,7 @@ const userStat = {
     {
       topic: "Greedy Algorithms",
       slug: "greedy-algorithms",
+      type: "algorithms",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -1030,6 +1047,7 @@ const userStat = {
     {
       topic: "Dynamic Programming",
       slug: "dynamic-programming",
+      type: "algorithms",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -1088,6 +1106,7 @@ const userStat = {
     {
       topic: "Sorting",
       slug: "sorting",
+      type: "algorithms",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [
@@ -1146,6 +1165,7 @@ const userStat = {
     {
       topic: "Searching",
       slug: "searching",
+      type: "algorithms",
       totalQuestion: Math.floor((Math.random() * 100000000) % 100),
       completed: Math.floor((Math.random() * 100000000) % 30),
       question: [

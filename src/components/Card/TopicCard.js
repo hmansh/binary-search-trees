@@ -40,13 +40,13 @@ const style = {
   }
 };
 
-export default function TopicCard({ pos, topic, total, completed, setColor }) {
-  const colors = [
-    // '#000066',
-    // '#031470',
-    "#071597",
-    "#043DF2",
-  ];
+const colorMapper = {
+  "basic": "#14746F",
+  "ds": "#023E8A",
+  "algorithms": "#FF6700",
+}
+
+export default function TopicCard({ pos, topic, total, completed, setColor , type}) {
 
   const perc = Math.floor(100 * (completed / total)) % 101;
 
@@ -57,12 +57,12 @@ export default function TopicCard({ pos, topic, total, completed, setColor }) {
   return (
     <div
       style={style.cardContainer}
-      onClick={() => changeColor(colors[pos % colors.length])}
+      onClick={() => changeColor(colorMapper[type])}
     >
       <Card variant="outlined" sx={style.cardComponent}>
         <div
           style={{
-            background: colors[Math.floor(Math.random() * 10) % colors.length],
+            background: colorMapper[type],
             ...style.cardHeader,
           }}
         >
