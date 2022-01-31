@@ -45,7 +45,7 @@ const style = {
 };
 
 export default function QuestionCard({ pos = 1, ...props }) {
-  const { color } = props;
+  const { color, question } = props;
   return (
     <div style={style.cardContainer}>
       <Card variant="outlined" sx={style.cardComponent}>
@@ -56,7 +56,7 @@ export default function QuestionCard({ pos = 1, ...props }) {
           }}
         >
           <div style={style.topicTitle}>
-            {"Reverse Linked List using Iterative Method"}
+            {question}
           </div>
         </div>
         <div style={style.cardLower}>
