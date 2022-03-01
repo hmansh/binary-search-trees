@@ -5,11 +5,11 @@ import "../../App.css";
 import Checkbox from "@mui/material/Checkbox";
 import RadioButtonUncheckedOutlinedIcon from "@mui/icons-material/RadioButtonUncheckedOutlined";
 import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
-import { QuestionLinkButton } from "../CustomerComponents";
+// import { QuestionLinkButton } from "../CustomerComponents";
 
 const style = {
   cardContainer: {
-    height: "90%",
+    height: "100%",
     minHeight: "16vh",
   },
   cardComponent: {
@@ -23,7 +23,7 @@ const style = {
   },
   cardHeader: {
     borderRadius: "0.6vh",
-    height: "55%",
+    height: "65%",
   },
   topicTitle: {
     padding: "0.5rem",
@@ -35,14 +35,18 @@ const style = {
   },
   statusContainer: {
     color: "black",
-    padding: "0.5rem",
+    // padding: "0.5rem",
     fontWeight: "500",
     fontSize: "1rem",
     textAlign: "left",
   },
   cardLower: {
-    height: "45%",
+    height: "30%"
   },
+  questionLevel: {
+    fontWeight: 600,
+    margin: 'auto',
+  }
 };
 
 export default function QuestionCard({ pos = 1, ...props }) {
@@ -69,10 +73,10 @@ export default function QuestionCard({ pos = 1, ...props }) {
                   checkedIcon={<CheckCircleOutlineOutlinedIcon />}
                 />
               </div>
-              <div className="link">
-                <QuestionLinkButton variant="contained" disableRipple>
-                  <div>Leetcode</div>
-                </QuestionLinkButton>
+              <div className="difficulty">
+                <div style={style.questionLevel}>
+                    Easy
+                </div>
               </div>
             </div>
           </Typography>

@@ -55,7 +55,13 @@
 }
 
 .completed {
-  width: 30%;
+  width: 20%;
+}
+
+.difficulty {
+  padding-right: 10px;
+  display: flex;
+  color: #0A84FF;
 }
 
 .link {

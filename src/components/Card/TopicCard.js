@@ -4,7 +4,7 @@ import "../../App.css";
 
 const style = {
   cardContainer: {
-    height: "90%",
+    height: "100%",
     minHeight: "16vh",
   },
   cardComponent: {
